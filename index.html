@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tajyire — Electronics Mall, Repairs & Training</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="imgs/Logo_page-0001.jpg.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand: #e6a65b; /* from logo */
+      --ink: #0f0f10;
+      --glass: rgba(255,255,255,0.18);
+      --glass-2: rgba(255,255,255,0.10);
+      --border: rgba(255,255,255,0.25);
+      --card-shadow: 0 8px 30px rgba(12,12,14,0.45);
+      --radius: 16px;
+      --maxw: 1200px;
+    }
+
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: linear-gradient(180deg,#fbfbfb 0%, #f3f5f7 100%);color:var(--ink);}
+
+    /* NAV */
+    nav{
+      width:100%;
+      position:fixed;
+      left:0;top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:10px 24px;
+      z-index:40;
+      max-width:calc(var(--maxw) + 48px);
+      margin:0 auto;
+      backdrop-filter: blur(10px) saturate(120%);
+      background: linear-gradient(180deg, rgba(255,255,255,0.42), rgba(255,255,255,0.20));
+      border-radius:999px;
+      border:1px solid var(--border);
+      box-shadow: 0 6px 20px rgba(18,18,20,0.06);
+    }
+    nav .brand{display:flex;gap:12px;align-items:center}
+    nav img{height:48px}
+    nav .links{display:flex;gap:18px;align-items:center;margin-left:18px}
+    nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:10px;transition:all .18s}
+    nav a:hover{background:rgba(230,166,91,0.10);color:var(--brand);transform:translateY(-2px)}
+
+    .container{max-width:var(--maxw);margin:0 auto;padding:22px}
+
+    /* HERO */
+    .hero{min-height:80vh;display:grid;align-items:center;grid-template-columns:1fr;gap:30px;padding-top:40px}
+    .hero-inner{display:flex;gap:40px;align-items:center;justify-content:space-between}
+    .hero-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.5));
+      border-radius:calc(var(--radius) + 8px);
+      padding:36px;
+      box-shadow:var(--card-shadow);
+      border:1px solid var(--border);
+      backdrop-filter: blur(18px) saturate(120%);
+      flex:1;
+    }
+    .hero-card h1{margin:0;font-size:34px;color:var(--ink);line-height:1.02}
+    .hero-card p{margin:12px 0 0;color:#2b2b2b;opacity:0.9}
+    .hero-actions{margin-top:20px;display:flex;gap:12px}
+    .btn{background:var(--brand);border:none;padding:12px 18px;border-radius:12px;font-weight:700;cursor:pointer;transition:all .18s}
+    .btn.secondary{background:transparent;border:1px solid rgba(15,15,16,0.06);}
+
+    .hero-visual{width:420px;max-width:42%;display:flex;align-items:center;justify-content:center}
+    .logo-wrap{width:100%;display:flex;align-items:center;justify-content:center}
+    .logo-wrap img{max-width:310px;height:auto}
+
+    /* SECTIONS */
+    section{padding:64px 18px}
+    .section-title{font-size:22px;color:var(--ink);margin:0 0 18px;font-weight:700}
+    .lead{color:#444;margin-bottom:20px}
+
+    
+
+    /* GRID CARDS */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{
+      background:var(--glass);
+      border-radius:14px;padding:20px;border:1px solid var(--border);
+      backdrop-filter: blur(12px);
+      box-shadow:0 6px 18px rgba(18,18,20,0.04);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(12,12,14,0.08)}
+    .card h3{margin:0 0 8px;color:var(--ink)}
+    .card p{margin:0;color:#333;opacity:.9}
+
+    /* SMALL ICON */
+    .k{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;margin-right:12px}
+
+    /* TRAINING LIST */
+    .train-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .train-item{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:12px;background:#fff;border:1px solid rgba(12,12,14,0.03)}
+    .train-item h4{margin:0}
+    .badge{background:var(--brand);color:#000;padding:6px 10px;border-radius:10px;font-weight:700}
+
+    /* RESPONSIVE */
+    @media (max-width:1000px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .hero-inner{flex-direction:column}
+      .hero-visual{max-width:60%}
+    }
+    @media (max-width:700px){
+      nav{padding:10px 12px}
+      .grid{grid-template-columns:1fr}
+      .train-list{grid-template-columns:1fr}
+      .hero-card h1{font-size:26px}
+      .hero-visual{display:none}
+    }
+
+    /* FOOTER */
+    footer{padding:28px 18px;background:transparent;border-top:1px solid rgba(12,12,14,0.03);margin-top:32px}
+    .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:6px}
+
+    /* Subtle entrance animation */
+    .fade-up{opacity:0;transform:translateY(12px);animation:fadeUp .6s ease forwards}
+    .delay-1{animation-delay:.12s}
+    .delay-2{animation-delay:.24s}
+    .delay-3{animation-delay:.36s}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">
+      <img src="imgs/Logo_page-0001.jpg.png" alt="Tajyire logo"/>
+      <div style="display:flex;flex-direction:column">
+        <strong style="font-size:14px;letter-spacing:.2px">Tajyire</strong>
+        <small style="font-size:11px;opacity:.6;margin-top:2px">Electronics Mall • Repairs • Training</small>
+      </div>
+    </div>
+
+    <div class="links">
+      <a href="#shop">Shopping</a>
+      <a href="#repair">Repair</a>
+      <a href="#training">Training</a>
+      <a href="#contact" class="btn" style="padding:10px 14px;border-radius:10px;">Contact</a>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-card fade-up delay-1">
+          <h1>Modern electronics — trusted services.</h1>
+          <p class="lead">Tajyire brings together a beautiful shopping experience, expert repairs, and hands-on technical training for young technicians — all under one roof.</p>
+          <div class="hero-actions">
+            <a href="#shop" class="btn">Shop Now</a>
+            <a href="#training" class="btn secondary">View Courses</a>
+          </div>
+
+          <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+            <div style="display:flex;gap:8px;align-items:center"><div class="k" style="background:rgba(230,166,91,0.12);border:1px solid rgba(230,166,91,0.14);">⭐</div><div><strong>Organized Mall</strong><div style="font-size:13px;opacity:.7">Structured shops & warranties</div></div></div>
+            <div style="display:flex;gap:8px;align-items:center"><div class="k" style="background:rgba(10,10,10,0.06);border:1px solid rgba(10,10,10,0.04);">🔧</div><div><strong>Certified Repairs</strong><div style="font-size:13px;opacity:.7">Quality parts & diagnostics</div></div></div>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up delay-2">
+          <div class="logo-wrap">
+            <img src="imgs/b_imga.png" alt="Tajyire"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="shop">
+      <h3 class="section-title">Shopping</h3>
+      <p class="lead">An elegant shopping experience — chosen products, trustworthy sellers, and clear warranty terms.</p>
+
+      <div class="grid" style="margin-top:18px">
+        <div class="card fade-up delay-1">
+          <h3>Featured Devices</h3>
+          <p>Handpicked phones, laptops and appliances. Each product card will include specs, price and warranty badge.</p>
+        </div>
+
+        <div class="card fade-up delay-2">
+          <h3>Verified Sellers</h3>
+          <p>Sellers operate inside the Tajyire ecosystem which enforces quality, receipts and after-sales care.</p>
+        </div>
+
+        <div class="card fade-up delay-3">
+          <h3>Delivery & Pickup</h3>
+          <p>Multiple delivery options across Kigali and secure pickup from the Tajyire mall locations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPAIR -->
+    <section id="repair">
+      <h3 class="section-title">Repair Services</h3>
+      <p class="lead">Professional repair services with diagnostics, transparent pricing and original spare parts where possible.</p>
+
+      <div class="grid" style="margin-top:18px">
+        <div class="card fade-up delay-1">
+          <h3>Phone Repair</h3>
+          <p>Screen replacement, water damage, battery and charging repairs with clear estimates.</p>
+        </div>
+        <div class="card fade-up delay-2">
+          <h3>Computers & Laptops</h3>
+          <p>Hardware upgrades, virus removal, data recovery and full diagnostics.</p>
+        </div>
+        <div class="card fade-up delay-3">
+          <h3>Appliance & Machine Repair</h3>
+          <p>Repair and preventive maintenance for household and office electronics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section id="training">
+      <h3 class="section-title">Training Programs</h3>
+      <p class="lead">Hands-on bootcamps and short courses designed to turn learners into professional technicians and entrepreneurs.</p>
+
+      <div class="train-list" style="margin-top:18px">
+        <div class="train-item fade-up delay-1">
+          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">P</div>
+          <div>
+            <h4>Phone Repair Course</h4>
+            <small style="color:#666">Practical: LCD & touch, battery, diagnostics. Certificate on completion.</small>
+          </div>
+          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
+        </div>
+
+        <div class="train-item fade-up delay-2">
+          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">M</div>
+          <div>
+            <h4>Machine Repair Course</h4>
+            <small style="color:#666">Learn servicing of home & office appliances and electromechanical diagnostics.</small>
+          </div>
+          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
+        </div>
+
+        <div class="train-item fade-up delay-3">
+          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">B</div>
+          <div>
+            <h4>Business & Sales</h4>
+            <small style="color:#666">How to open a repair shop, customer care, stock & pricing — tailored to small entrepreneurs.</small>
+          </div>
+          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3 class="section-title">Contact & Location</h3>
+      <p class="lead">Visit our mall location for in-person support or contact our central office for partnerships, vendor registrations and training inquiries.</p>
+
+      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:18px">
+        <div style="flex:1;min-width:260px" class="card fade-up delay-1">
+          <h4>Main Office</h4>
+          <p>Matheus House, Kigali - Tajyire Electronics Mall</p>
+          <p style="margin-top:8px;color:#444">Phone: +250 7XX XXX XXX<br>Email: info@tajyire.rw</p>
+        </div>
+
+        <div style="flex:1;min-width:280px" class="card fade-up delay-2">
+          <h4>Vendor & Partnership</h4>
+          <p>Register as a vendor or enquire about co-renting shop space inside the mall.</p>
+          <a href="#" class="btn" style="margin-top:10px;display:inline-block">Partner With Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div style="display:flex;gap:12px;align-items:center"><img src="Logo_page-0001.jpg" style="height:36px" alt="logo"><div><strong>Tajyire</strong><div style="font-size:12px;opacity:.6">Electronics Mall & Training</div></div></div>
+      <div style="font-size:13px;color:#666">© <strong>Tajyire</strong> — All rights reserved</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple: reveal on scroll for .fade-up items
+    const reveal = ()=>{
+      document.querySelectorAll('.fade-up').forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if(r.top < (window.innerHeight - 60)) el.style.opacity=1, el.style.transform='none';
+      })
+    }
+    window.addEventListener('scroll', reveal); window.addEventListener('load', reveal);
+  </script>
+
+</body>
+</html>
