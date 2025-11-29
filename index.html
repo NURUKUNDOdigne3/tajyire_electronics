@@ -104,6 +104,13 @@
     .browse-more{display:inline-block!important}
     .browse-more:hover{background:rgba(230,166,91,0.15);transform:translateX(4px)}
 
+    /* PARTNER SLIDER */
+    @keyframes slide-infinite{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-180px)}
+    }
+    .partner-slider{will-change:transform}
+
     /* RESPONSIVE */
     @media (max-width:1200px){
       .grid{gap:16px}
@@ -422,69 +429,143 @@
       </div>
     </section>
 
-    <!-- TRAINING -->
-    <section id="training">
-      <h3 class="section-title">Training Programs</h3>
-      <p class="lead">Hands-on bootcamps and short courses designed to turn learners into professional technicians and entrepreneurs.</p>
-
-      <div class="train-list" style="margin-top:18px">
-        <div class="train-item fade-up delay-1">
-          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">P</div>
-          <div>
-            <h4>Phone Repair Course</h4>
-            <small style="color:#666">Practical: LCD & touch, battery, diagnostics. Certificate on completion.</small>
-          </div>
-          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
-        </div>
-
-        <div class="train-item fade-up delay-2">
-          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">M</div>
-          <div>
-            <h4>Machine Repair Course</h4>
-            <small style="color:#666">Learn servicing of home & office appliances and electromechanical diagnostics.</small>
-          </div>
-          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
-        </div>
-
-        <div class="train-item fade-up delay-3">
-          <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,rgba(230,166,91,0.12),rgba(230,166,91,0.08));display:flex;align-items:center;justify-content:center;font-weight:700">B</div>
-          <div>
-            <h4>Business & Sales</h4>
-            <small style="color:#666">How to open a repair shop, customer care, stock & pricing — tailored to small entrepreneurs.</small>
-          </div>
-          <div style="margin-left:auto;display:flex;align-items:center"><div class="badge">Enroll</div></div>
-        </div>
-
-      </div>
-
+    <section class="web_banner" style="background-image:url('imgs/web_graph.png');background-size:cover;background-position:center;background-repeat:no-repeat;padding:60px 18px;min-height:350px;width:100%">
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h3 class="section-title">Contact & Location</h3>
-      <p class="lead">Visit our mall location for in-person support or contact our central office for partnerships, vendor registrations and training inquiries.</p>
+  <section class="our_partenes" style="padding:100px 18px;background:linear-gradient(135deg,rgba(230,166,91,0.08),rgba(230,166,91,0.02))">
+    <div style="max-width:var(--maxw);margin:0 auto">
+      <h3 class="section-title" style="text-align:center;margin-bottom:12px;font-size:28px">Our Trusted Partners</h3>
+      <p class="lead" style="text-align:center;margin-bottom:60px;color:#666;font-size:15px">Premium brands delivering excellence to Tajyire Electronics</p>
 
-      <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:18px">
-        <div style="flex:1;min-width:260px" class="card fade-up delay-1">
-          <h4>Main Office</h4>
-          <p>Matheus House, Kigali - Tajyire Electronics Mall</p>
-          <p style="margin-top:8px;color:#444">Phone: +250 7XX XXX XXX<br>Email: info@tajyire.rw</p>
-        </div>
+      <div style="overflow:hidden;border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,0.5),rgba(255,255,255,0.3));backdrop-filter:blur(10px);padding:40px 20px;border:1px solid rgba(255,255,255,0.4)">
+        <div style="display:flex;gap:60px;animation:slide-infinite 25s linear infinite;align-items:center;justify-content:center" class="partner-slider">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">Apple</span>
+          </div>
 
-        <div style="flex:1;min-width:280px" class="card fade-up delay-2">
-          <h4>Vendor & Partnership</h4>
-          <p>Register as a vendor or enquire about co-renting shop space inside the mall.</p>
-          <a href="#" class="btn" style="margin-top:10px;display:inline-block">Partner With Us</a>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="imgs/sam_Saiun.avif" alt="Samsung" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">Samsung</span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="imgs/Dell-Logo.png" alt="Dell" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">Dell</span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="imgs/Tecno Mobile.png" alt="Techno" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">Techno Mobile</span>
+          </div>
+
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">HP</span>
+          </div>
+
+          <!-- Duplicate for seamless loop -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px;min-width:120px">
+            <div style="width:100px;height:100px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border-radius:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(230,166,91,0.1);padding:8px">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height:60px;object-fit:contain">
+            </div>
+            <span style="font-weight:600;color:var(--ink);font-size:13px">Apple</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div style="display:flex;gap:12px;align-items:center"><img src="Logo_page-0001.jpg" style="height:36px" alt="logo"><div><strong>Tajyire</strong><div style="font-size:12px;opacity:.6">Electronics Mall & Training</div></div></div>
-      <div style="font-size:13px;color:#666">© <strong>Tajyire</strong> — All rights reserved</div>
+  <footer style="background:linear-gradient(135deg,#1a1a1e 0%,#16213e 100%);color:#fff;padding:80px 18px 30px;margin-top:60px">
+    <div class="container" style="max-width:var(--maxw);margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:50px">
+        
+        <!-- Brand Section -->
+        <div>
+          <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px">
+            <img src="imgs/Logo_page-0001.jpg.png" style="height:40px" alt="Tajyire logo">
+            <div>
+              <strong style="font-size:16px;display:block">Tajyire</strong>
+              <small style="font-size:11px;opacity:.7;color:var(--brand)">Electronics Mall</small>
+            </div>
+          </div>
+          <p style="font-size:13px;line-height:1.6;opacity:.8;margin:0">Your one-stop destination for quality electronics, expert repairs, and professional training programs.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 16px;color:#fff">Quick Links</h4>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+            <li><a href="#home" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Home</a></li>
+            <li><a href="#phones" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Shop Phones</a></li>
+            <li><a href="#laptops" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Shop Laptops</a></li>
+            <li><a href="#training" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 16px;color:#fff">Services</h4>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+            <li><a href="#" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Phone Repair</a></li>
+            <li><a href="#" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Device Diagnostics</a></li>
+            <li><a href="#" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Warranty Support</a></li>
+            <li><a href="#" style="color:#ddd;text-decoration:none;font-size:13px;transition:all .3s">Trade-In Program</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 16px;color:#fff">Contact</h4>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:13px">
+            <div style="opacity:.8">
+              <div style="color:var(--brand);font-weight:600;margin-bottom:4px">Phone</div>
+              <a href="tel:+250700000000" style="color:#ddd;text-decoration:none">+250 7XX XXX XXX</a>
+            </div>
+            <div style="opacity:.8">
+              <div style="color:var(--brand);font-weight:600;margin-bottom:4px">Email</div>
+              <a href="mailto:info@tajyire.rw" style="color:#ddd;text-decoration:none">info@tajyire.rw</a>
+            </div>
+            <div style="opacity:.8">
+              <div style="color:var(--brand);font-weight:600;margin-bottom:4px">Location</div>
+              <span style="color:#ddd">Matheus House, Kigali</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social & Divider -->
+      <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:30px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+        <div style="display:flex;gap:16px;align-items:center">
+          <span style="font-size:12px;opacity:.7">Follow us:</span>
+          <a href="#" style="width:36px;height:36px;background:rgba(230,166,91,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--brand);text-decoration:none;font-size:16px;transition:all .3s;border:1px solid rgba(230,166,91,0.3)">f</a>
+          <a href="#" style="width:36px;height:36px;background:rgba(230,166,91,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--brand);text-decoration:none;font-size:16px;transition:all .3s;border:1px solid rgba(230,166,91,0.3)">𝕏</a>
+          <a href="#" style="width:36px;height:36px;background:rgba(230,166,91,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--brand);text-decoration:none;font-size:16px;transition:all .3s;border:1px solid rgba(230,166,91,0.3)">IG</a>
+        </div>
+
+        <div style="display:flex;gap:20px;font-size:12px">
+          <a href="#" style="color:#999;text-decoration:none;transition:all .3s">Privacy Policy</a>
+          <a href="#" style="color:#999;text-decoration:none;transition:all .3s">Terms & Conditions</a>
+          <a href="#" style="color:#999;text-decoration:none;transition:all .3s">Sitemap</a>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div style="border-top:1px solid rgba(255,255,255,0.1);margin-top:30px;padding-top:20px;text-align:center;font-size:12px;opacity:.6">
+        <p style="margin:0">© 2025 <strong>Tajyire Electronics</strong>. All rights reserved. | Designed with excellence for excellence by Christopher saltel.</p>
+      </div>
     </div>
   </footer>
 
